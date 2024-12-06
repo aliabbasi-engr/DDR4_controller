@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Simulation Library
+/validation/compile_simlib/
