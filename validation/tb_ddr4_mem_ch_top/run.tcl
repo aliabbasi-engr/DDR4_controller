@@ -76,14 +76,19 @@ $PHY_PATH/mig_phy.srcs/sources_1/ip/ddr4_0/tb/microblaze_mcs_0.sv \
     glbl.v }
 
     blk_mem_gen {
-    			$BRAM_PATH/bram_512x64/bram.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v \
+
+		$BRAM_PATH/bram_512x64/bram.srcs/sources_1/ip/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v \
 		$BRAM_PATH/bram_512x64/bram.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v \
-			$BRAM_PATH/bram_528x64/bram_528x64.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v \
+
+		$BRAM_PATH/bram_528x64/bram_528x64.srcs/sources_1/ip/blk_mem_gen_528x64/simulation/blk_mem_gen_v8_4.v \
 		$BRAM_PATH/bram_528x64/bram_528x64.srcs/sources_1/ip/blk_mem_gen_528x64/sim/blk_mem_gen_528x64.v \
-			$BRAM_PATH/bram_528x8/bram_528x8.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v \
-		      $BRAM_PATH/bram_528x8/bram_528x8.srcs/sources_1/ip/blk_mem_gen_528x8/sim/blk_mem_gen_528x8.v \
-		$BRAM_PATH/bram_52x4/bram_52x4.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v \
+
+		$BRAM_PATH/bram_528x8/bram_528x8.srcs/sources_1/ip/blk_mem_gen_528x8/simulation/blk_mem_gen_v8_4.v \
+		$BRAM_PATH/bram_528x8/bram_528x8.srcs/sources_1/ip/blk_mem_gen_528x8/sim/blk_mem_gen_528x8.v \
+
+		$BRAM_PATH/bram_52x4/bram_52x4.srcs/sources_1/ip/blk_mem_gen_52x4/simulation/blk_mem_gen_v8_4.v \
 	 	$BRAM_PATH/bram_52x4/bram_52x4.srcs/sources_1/ip/blk_mem_gen_52x4/sim/blk_mem_gen_52x4.v \
+
   		$VIVADO_FOLDER_PATH/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv \
 		$VIVADO_FOLDER_PATH/data/ip/xpm/xpm_VCOMP.vhd 
 		}

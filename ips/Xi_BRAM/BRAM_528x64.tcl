@@ -20,4 +20,4 @@ create_ip_run [get_files -of_objects [get_fileset sources_1] $IP_DIR/IP/bram_528
 
 launch_runs -jobs 4 blk_mem_gen_528x64_synth_1
 
-export_simulation -of_objects [get_files $IP_DIR/IP/bram_528x64/bram_528x64.srcs/sources_1/ip/blk_mem_gen_528x64/blk_mem_gen_528x64.xci] -simulator modelsim -directory $IP_DIR/IP/bram_528x64/bram_528x64.ip_user_files/sim_scripts -ip_user_files_dir $IP_DIR/IP/bram_528x64/bram_528x64.ip_user_files -ipstatic_source_dir $IP_DIR/IP/bram_528x64/bram_528x64.ip_user_files/ipstatic -lib_map_path $SIM_LIB_PATH -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files $IP_DIR/IP/bram_528x64/bram_528x64.srcs/sources_1/ip/blk_mem_gen_528x64/blk_mem_gen_528x64.xci] -simulator questasim -directory $IP_DIR/IP/bram_528x64/bram_528x64.ip_user_files/sim_scripts -ip_user_files_dir $IP_DIR/IP/bram_528x64/bram_528x64.ip_user_files -ipstatic_source_dir $IP_DIR/IP/bram_528x64/bram_528x64.ip_user_files/ipstatic -lib_map_path $SIM_LIB_PATH -use_ip_compiled_libs -force -quiet

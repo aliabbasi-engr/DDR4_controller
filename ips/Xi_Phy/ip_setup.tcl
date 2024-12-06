@@ -6,7 +6,7 @@
 ###############################################################################
 
 #Full Path of the location where TU-KL memory controller is cloned - Should be configured
-set MEMCTRL_DIR C:/MyFiles/chirag/memctrl/Open_source_FPGA/DDR4_controller
+set MEMCTRL_DIR C:/Users/abbasa46/Documents/GitHub/DDR4_controller
 
 #Do not disturb
 set IP_DIR $MEMCTRL_DIR/ips/Xi_Phy
@@ -21,7 +21,7 @@ set CONST_PATH $MEMCTRL_DIR/runs/FPGA/CONST
 set SIM_LIB_PATH "$MEMCTRL_DIR/validation"
 
 #Set the Modelsim executatble folder path
-set MODELSIM_EXE_PATH "C:/modeltech64_2019.1/win64"
+set MODELSIM_EXE_PATH "C:/questasim64_2019.1/win64"
 
 #Set the vivado folder path
 set VIVADO_FOLDER_PATH "C:/Xilinx/Vivado/2019.1"

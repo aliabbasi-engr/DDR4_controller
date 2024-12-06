@@ -49,7 +49,7 @@ set_property TOP [lindex [find_top] 0] [current_fileset]
 
 #compile_simlib -simulator modelsim -simulator_exec_path {C:/modeltech64_2019.1/win64} -family all -language all -library all -dir {$sim_lib_path} -force
 
-export_simulation -of_objects [get_files $IP_DIR/IP/mig_phy/mig_phy.srcs/sources_1/ip/$IP_NAME/${IP_NAME}.xci] -simulator modelsim -directory $IP_DIR/IP/mig_phy/mig_phy.ip_user_files/sim_scripts -ip_user_files_dir $IP_DIR/IP/mig_phy/mig_phy.ip_user_files -ipstatic_source_dir $IP_DIR/IP/mig_phy/mig_phy.ip_user_files/ipstatic -lib_map_path $SIM_LIB_PATH -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files $IP_DIR/IP/mig_phy/mig_phy.srcs/sources_1/ip/$IP_NAME/${IP_NAME}.xci] -simulator questasim -directory $IP_DIR/IP/mig_phy/mig_phy.ip_user_files/sim_scripts -ip_user_files_dir $IP_DIR/IP/mig_phy/mig_phy.ip_user_files -ipstatic_source_dir $IP_DIR/IP/mig_phy/mig_phy.ip_user_files/ipstatic -lib_map_path $SIM_LIB_PATH -use_ip_compiled_libs -force -quiet
 
 #export_simulation  -lib_map_path "c:/Users/chirag/project_3/project_1.cache/compile_simlib/modelsim" -directory "SIM" -simulator modelsim -use_ip_compiled_libs
 
