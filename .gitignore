@@ -43,3 +43,6 @@
 validation/tb_ddr4_mem_ch_top/start_time.txt
 *.wlf
 validation/tb_ddr4_mem_ch_top/transcript
+/ips/Xi_Phy/.cxl.ip
+ips/Xi_Phy/.cxl.questasim.version
+ips/Xi_Phy/compile_simlib.log.bak
