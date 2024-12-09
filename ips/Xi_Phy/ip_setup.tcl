@@ -18,7 +18,8 @@ set CONST_PATH $MEMCTRL_DIR/runs/FPGA/CONST
 
 #Set the location for Xilinx specific Modelsim compiled lib - Should be configured
 #set SIM_LIB_PATH "C:/Users/chirag/project_3/project_1.cache/compile_simlib/modelsim"
-set SIM_LIB_PATH "$MEMCTRL_DIR/validation"
+#set SIM_LIB_PATH "$MEMCTRL_DIR/validation"
+set SIM_LIB_PATH "C:/Xilinx/Vivado/2019.1/sim_libs"
 
 #Set the Modelsim executatble folder path
 set MODELSIM_EXE_PATH "C:/questasim64_2019.1/win64"
