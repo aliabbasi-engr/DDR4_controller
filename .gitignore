@@ -33,3 +33,13 @@
 
 # Simulation Library
 /validation/compile_simlib/
+/ips/Xi_Phy/IP
+/ips/Xi_BRAM/IP
+*.jou
+*.log
+/validation/tb_ddr4_mem_ch_top/xi_phy
+/validation/tb_ddr4_mem_ch_top/work
+/validation/tb_ddr4_mem_ch_top/blk_mem_gen
+validation/tb_ddr4_mem_ch_top/start_time.txt
+*.wlf
+validation/tb_ddr4_mem_ch_top/transcript
