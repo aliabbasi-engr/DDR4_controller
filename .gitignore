@@ -48,3 +48,6 @@ ips/Xi_Phy/.cxl.questasim.version
 ips/Xi_Phy/compile_simlib.log.bak
 *.bak
 *.ini
+/runs/FPGA/SYNTH
+/runs/FPGA/IMPL
+/runs/FPGA/BIT
