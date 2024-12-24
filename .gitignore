@@ -51,3 +51,5 @@ ips/Xi_Phy/compile_simlib.log.bak
 /runs/FPGA/SYNTH
 /runs/FPGA/IMPL
 /runs/FPGA/BIT
+/ips/Xi_VIP/IP
+/validation/tb_ddr4_mem_ch_top/xi_vip
