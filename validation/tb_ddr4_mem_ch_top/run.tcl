@@ -13,7 +13,7 @@ source ../../ips/Xi_Phy/ip_setup.tcl
 
 set PHY_PATH  $IP_DIR/IP/mig_phy
 set BRAM_PATH  $IP_DIR/../Xi_BRAM/IP
-set VIP_PATH   $IP_DIR/../Xi_VIP/IP
+set VIP_PATH   $IP_DIR/../Xi_VIP/IP/axi_vip
 puts $PHY_PATH
 
 set library_file_list "
@@ -95,6 +95,18 @@ set library_file_list "
 		}
 
     xi_vip {
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/clk_vip_if.sv \
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/rst_vip_if.sv \
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/axi_vip_axi4pc.sv \
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/xil_common_vip_pkg.sv \
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/axi_vip_pkg.sv \
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv \
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv \
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/axi_vip_if.sv \
+		$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl/axi4stream_vip_if.sv \
+		$VIP_PATH/../../imports/glbl.v \
+		$VIP_PATH/axi_vip.srcs/sources_1/ip/axi_vip_0/sim/axi_vip_0_pkg.sv \
+		$VIP_PATH/axi_vip.srcs/sources_1/ip/axi_vip_0/sim/axi_vip_0.sv
 		}
 
     work {
@@ -188,6 +200,10 @@ foreach {library file_list} $library_file_list {
 			"+incdir+$PHY_PATH/mig_phy.srcs/sources_1/ip/ddr4_0/tb" \
 			"+incdir+$PHY_PATH/mig_phy.srcs/sources_1/ip/ddr4_0/rtl/ip_top" \
 			"+incdir+$PHY_PATH/mig_phy.srcs/sources_1/ip/ddr4_0/rtl/cal" \
+			"+incdir+$VIP_PATH/../../imports" \
+			"+incdir+$VIP_PATH/axi_vip.srcs/sources_1/ip/axi_vip_0/hdl" \
+			"+incdir+$VIVADO_FOLDER_PATH/data/xilinx_vip/hdl" \
+			"+incdir+$VIVADO_FOLDER_PATH/data/xilinx_vip/include" \
 			"+define+DDR4" \
 			"+define+FPGA" \
 			"+define+SIMULATION" \
@@ -217,6 +233,9 @@ eval vsim -voptargs="+acc" -t ps \
 	-L lmb_bram_if_cntlr_v4_0_16 \
 	-L blk_mem_gen_v8_4_3 \
 	-L iomodule_v3_1_4 \
+	-L axi_infrastructure_v1_1_0 \
+	-L axi_vip_v1_1_5 \
+	-L xilinx_vip \
 	-L unisims_ver \
 	-L unimacro_ver \
 	-L secureip \

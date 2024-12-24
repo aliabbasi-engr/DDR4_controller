@@ -468,6 +468,36 @@ add wave -noupdate -group rank_fsm /tb_ddr4_mem_ch_top/dut/mem_ctrl_top/mem_ctrl
 add wave -noupdate -group rank_fsm /tb_ddr4_mem_ch_top/dut/mem_ctrl_top/mem_ctrl/ch_ctrl/RM/cmd_mux_fe_id_valid
 add wave -noupdate -group rank_fsm /tb_ddr4_mem_ch_top/dut/mem_ctrl_top/mem_ctrl/ch_ctrl/RM/cmd_mux_write
 add wave -noupdate -group rank_fsm /tb_ddr4_mem_ch_top/dut/mem_ctrl_top/mem_ctrl/ch_ctrl/RM/cmd_mux_read
+
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/aclk
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/aresetn
+
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_awaddr
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_awlen
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_awvalid
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_awready
+
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_wdata
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_wstrb
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_wlast
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_wvalid
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_wready
+
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_bresp
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_bvalid
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_bready
+
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_araddr
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_arlen
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_arvalid
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_arready
+
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_rdata
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_rresp
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_rlast
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_rvalid
+add wave -noupdate -expand -group axi_vip_0_inst /tb_ddr4_mem_ch_top/axi_vip_0_inst/m_axi_rready
+
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {1192500000 ps} 0} {{Cursor 2} {4366875313 ps} 0}
 quietly wave cursor active 2

@@ -3,6 +3,8 @@
  `include "arch_package.sv"
 `endif
 
+`include "../../ips/Xi_VIP/IP/axi_vip/axi_vip.srcs/sources_1/ip/axi_vip_0/sim/axi_vip_0.sv"
+
 module tb_ddr4_mem_ch_top();
 
    localparam ADDR_WIDTH                    = 17;
@@ -608,6 +610,62 @@ module tb_ddr4_mem_ch_top();
       .RVALID(s_axi.rvalid),
       .RREADY(s_axi.rready)
       );
+
+    //===========================================================================
+    //                                Xilinx AXI VIP
+    //===========================================================================   
+
+    // input  wire aclk
+    // input  wire aresetn
+    // output wire [29 : 0] m_axi_awaddr
+    // output wire [7 : 0] m_axi_awlen
+    // output wire m_axi_awvalid
+    // input  wire m_axi_awready
+    // output wire [511 : 0] m_axi_wdata
+    // output wire [63 : 0] m_axi_wstrb
+    // output wire m_axi_wlast
+    // output wire m_axi_wvalid
+    // input  wire m_axi_wready
+    // input  wire [1 : 0] m_axi_bresp
+    // input  wire m_axi_bvalid
+    // output wire m_axi_bready
+    // output wire [29 : 0] m_axi_araddr
+    // output wire [7 : 0] m_axi_arlen
+    // output wire m_axi_arvalid
+    // input  wire m_axi_arready
+    // input  wire [511 : 0] m_axi_rdata
+    // input  wire [1 : 0] m_axi_rresp
+    // input  wire m_axi_rlast
+    // input  wire m_axi_rvalid
+    // output wire m_axi_rready
+
+    axi_vip_0 axi_vip_0_inst (
+      .aclk(ui_clk),                    
+      .aresetn(ui_rst_n),     
+
+      .m_axi_awaddr(),    
+      .m_axi_awlen(),      
+      .m_axi_awvalid(),  
+      .m_axi_awready(1'b0),  
+      .m_axi_wdata(),      
+      .m_axi_wstrb(),      
+      .m_axi_wlast(),      
+      .m_axi_wvalid(),    
+      .m_axi_wready(1'b0),    
+      .m_axi_bresp(),      
+      .m_axi_bvalid(1'b0),    
+      .m_axi_bready(),    
+      .m_axi_araddr(),    
+      .m_axi_arlen(),      
+      .m_axi_arvalid(),  
+      .m_axi_arready(1'b0),  
+      .m_axi_rdata(),      
+      .m_axi_rresp(),      
+      .m_axi_rlast(),      
+      .m_axi_rvalid(1'b0),    
+      .m_axi_rready()     
+    );
+
 
    //===========================================================================
    //                         Memory Model instantiation
